@@ -2,7 +2,7 @@
 David Little
 CSt 205 Proj 1
 
-This code will take a set of .png pictures labeled 1.png to n.png from the Images folder and perform a median function
+This code will take a set of .png pictures labeled 1.png to n.png from the Project1Images folder and performs a median function
 to remove inconsiderate pedestrians and outputs to output.png
 
 Not fast, doesn't check for errors or read in non .png files
@@ -24,7 +24,7 @@ def median(mylist):
     return sorts[length / 2]
 
 #imgPath = os.path.abspath("Images/1.png")
-imgPath = "Images/"
+imgPath = "Project1Images/"
 
 im = ()
 for i in range (1,len([name for name in os.listdir(imgPath)])):
