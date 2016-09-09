@@ -1,3 +1,18 @@
+'''
+David Little
+CSt 205 Proj 1
+
+This code will take a set of .png pictures labeled 1.png to n.png from the Images folder and perform a median function
+to remove inconsiderate pedestrians and outputs to output.png
+
+Not fast, doesn't check for errors or read in non .png files
+but it works
+
+github
+https://github.com/rolite/CST205
+'''
+
+import os, os.path
 import statistics
 from PIL import Image
 
@@ -12,7 +27,7 @@ def median(mylist):
 imgPath = "Images/"
 
 im = ()
-for i in range (1,9):
+for i in range (1,len([name for name in os.listdir(imgPath)])):
     im = im + (Image.open(imgPath + str(i) + ".png").convert('RGB'),)
 
 newImg = Image.new('RGB', im[0].size)
